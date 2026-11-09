@@ -1,0 +1,8 @@
+
+flask
+flask-cors
+google-genai
+groq
+chromadb
+python-dotenv
+pypdf

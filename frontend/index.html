@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17241d">
+  <title>unA | Defender AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="unA home">
+        <span class="brand-mark" aria-hidden="true">uA</span>
+        <span class="brand-name">unA<span class="brand-dot">.</span></span>
+      </a>
+      <div class="topbar-actions">
+        <div class="topbar-status">
+          <span class="status-dot backend-status-indicator is-checking" aria-hidden="true"></span>
+          <span class="backend-status-label" aria-live="polite">Checking backend…</span>
+        </div>
+        <label class="dataset-only-toggle" for="dataset-only-toggle">
+          <input id="dataset-only-toggle" type="checkbox" checked>
+          <span class="toggle-track" aria-hidden="true"></span>
+          <span>Dataset Only</span>
+        </label>
+      </div>
+    </header>
+
+    <section class="chat-layout" aria-label="unA chat">
+      <div class="intro">
+        <p class="eyebrow">YOUR LAND ROVER DEFENDER COMPANION</p>
+        <h1>Adventure starts<br>with a question.</h1>
+        <p class="intro-copy">Explore Defender specs, compare models, and find the details you need.</p>
+      </div>
+
+      <section class="chat-card" aria-label="Conversation">
+        <div class="chat-card-header">
+          <div class="assistant-avatar" aria-hidden="true">uA</div>
+          <div>
+            <h2>Chat with unA</h2>
+            <p>
+              <span class="status-dot backend-status-indicator is-checking" aria-hidden="true"></span>
+              <span class="backend-status-label" aria-live="polite">Checking backend…</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="messages" id="messages" role="log" aria-live="polite" aria-relevant="additions">
+          <article class="message assistant-message">
+            <div class="message-avatar" aria-hidden="true">uA</div>
+            <div class="message-content">
+              <span class="message-sender">unA</span>
+              <p>Hi, I’m unA. How can I help you?</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="chat-hint"></p>
+        <form class="composer" id="chat-form">
+          <label class="sr-only" for="question">Your question</label>
+          <input
+            id="question"
+            name="question"
+            type="text"
+            placeholder="Are you ready to chat?"
+            autocomplete="off"
+            required
+          >
+          <button class="send-button" id="send-button" type="submit">
+            <span>Send</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M3 10h13M10 4l6 6-6 6"></path>
+            </svg>
+          </button>
+        </form>
+        <p class="privacy-note">With Dataset Only on, answers use only your local vehicle data. Turn it off to search the web.</p>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span>unA · Land Rover Defender AI</span>
+      <span>Built for the road ahead</span>
+    </footer>
+  </main>
+</body>
+</html>
